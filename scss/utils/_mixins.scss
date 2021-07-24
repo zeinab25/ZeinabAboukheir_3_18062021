@@ -1,0 +1,26 @@
+@mixin box-shadow(
+	$size-x: $shadow-offset-x,
+	$size-y: $shadow-offset-y,
+	$blur: $shadow-blur,
+	$color: $shadow-color
+) {
+	box-shadow: $size-x $size-y $blur $color;
+}
+
+@mixin box-shadow-hover(
+	$size-x: $shadow-offset-x,
+	$size-y: $shadow-offset-y,
+	$blur: $shadow-blur,
+	$color: $dark-shadow-color
+) {
+	box-shadow: $size-x $size-y $blur $color;
+}
+
+@mixin absolute-position($top, $right, $bottom, $left, $x, $y) {
+	position: absolute;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+	transform: translate($x, $y);
+}

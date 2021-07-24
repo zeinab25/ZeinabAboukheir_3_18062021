@@ -1,0 +1,20 @@
+.btn {
+	font-family: $text-font;
+	font-size: 16px;
+	margin-top: 40px;
+	background: $gradient-color;
+	color: white;
+	border-radius: 100px;
+	cursor: pointer;
+	padding: 15px 20px;
+	border: none;
+	@include box-shadow;
+	min-width: 180px;
+}
+
+.btn {
+	&:hover {
+		@include box-shadow-hover;
+		background: $light-gradient-color;
+	}
+}

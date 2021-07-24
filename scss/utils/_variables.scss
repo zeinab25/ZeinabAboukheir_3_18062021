@@ -1,0 +1,35 @@
+/*font*/
+$headind-font: "Shrikhand", sans-serif;
+$text-font: "Roboto", sans-serif;
+
+/*colors*/
+$purple-color: #9356dc;
+$light-purple-color: lighten($purple-color, 35%);
+$pink-color: #ff79da;
+$blue-color: #99e2d0;
+$dark-blue-color: darken($blue-color, 30%);
+$background-color-main: rgb(246, 246, 246);
+$localisation-color: rgb(234, 234, 234);
+$gradient-color: linear-gradient(
+	to left top,
+	$purple-color,
+	#b35cdc,
+	#cf64dc,
+	#e86edb,
+	$pink-color
+);
+$light-gradient-color: linear-gradient(
+	to left top,
+	lighten($purple-color, 5%),
+	lighten(#b35cdc, 5%),
+	lighten(#cf64dc, 5%),
+	lighten(#e86edb, 5%),
+	lighten($pink-color, 5%)
+);
+
+/*@mixin argument*/
+$shadow-offset-x: 0;
+$shadow-offset-y: 0px;
+$shadow-blur: 5px;
+$shadow-color: rgba(200, 200, 200);
+$dark-shadow-color: darken($shadow-color, 50%);

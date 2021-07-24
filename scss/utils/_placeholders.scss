@@ -1,0 +1,15 @@
+%flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+%max-width,
+h1,
+h2,
+article,
+.card-container,
+.menu-contenair section {
+	max-width: 1440px;
+	margin: auto;
+}

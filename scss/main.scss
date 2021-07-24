@@ -1,0 +1,25 @@
+/*bases*/
+@import "./base/reset";
+
+/*utils*/
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./utils/placeholders";
+@import "./utils/keyframes";
+
+
+/*bases*/
+@import "./base/typography";
+
+/*layouts*/
+@import "./layouts/header";
+@import "./layouts/footer";
+
+/*components*/
+@import "./components/button";
+@import "./components/heart-icon";
+@import "./components/loader";
+
+/*pages*/
+@import "./pages/home";
+@import "./pages/menu";

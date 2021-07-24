@@ -1,0 +1,58 @@
+@keyframes heart {
+	0% {
+		font-weight: 100;
+		color: black;
+	}
+
+	20% {
+		background: linear-gradient(to left, transparent, #cf64dc);
+		-webkit-background-clip: text;
+		background-clip: text;
+		background-repeat: no-repeat;
+		background-size: 20%;
+	}
+
+	50% {
+		background: linear-gradient(to left, transparent, #cf64dc);
+		-webkit-background-clip: text;
+		background-clip: text;
+		background-repeat: no-repeat;
+		background-size: 50%;
+	}
+
+	90% {
+		background: linear-gradient(to left, transparent, #cf64dc);
+		-webkit-background-clip: text;
+		background-clip: text;
+		background-repeat: no-repeat;
+		background-size: 90%;
+	}
+}
+
+@keyframes ItemMenu {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateY(-40px);
+		opacity: 1;
+	}
+}
+
+@keyframes loader {
+	100% {
+		opacity: 0;
+		z-index: -1;
+	}
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}

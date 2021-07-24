@@ -1,0 +1,539 @@
+@charset "UTF-8";
+/*bases*/
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Shrikhand&display=swap");
+@import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/*utils*/
+/*font*/
+/*colors*/
+/*@mixin argument*/
+.menu-container article .menu-check, header div, section article li::before, .localisation, .loader, header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer div,
+h1,
+h2,
+article,
+.card-container,
+.menu-contenair section {
+  max-width: 1440px;
+  margin: auto;
+}
+
+@keyframes heart {
+  0% {
+    font-weight: 100;
+    color: black;
+  }
+  20% {
+    background: linear-gradient(to left, transparent, #cf64dc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-repeat: no-repeat;
+    background-size: 20%;
+  }
+  50% {
+    background: linear-gradient(to left, transparent, #cf64dc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-repeat: no-repeat;
+    background-size: 50%;
+  }
+  90% {
+    background: linear-gradient(to left, transparent, #cf64dc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-repeat: no-repeat;
+    background-size: 90%;
+  }
+}
+@keyframes ItemMenu {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-40px);
+    opacity: 1;
+  }
+}
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/*bases*/
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/*layouts*/
+/*header*/
+header {
+  box-shadow: 0 0px 5px #c8c8c8;
+  position: relative;
+  z-index: 1;
+  padding: 20px 0 15px 0;
+}
+header img {
+  width: 160px;
+}
+
+footer {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.815);
+  color: white;
+}
+footer h3 {
+  font-family: "Shrikhand", sans-serif;
+  padding-bottom: 15px;
+}
+footer ul {
+  padding-bottom: 15px;
+  padding-right: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 658px) {
+  footer ul {
+    flex-direction: column;
+  }
+}
+footer ul li {
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+footer ul li:nth-child(1) {
+  list-style-position: inside;
+  list-style-image: url(../images/icons/utensils-solid.svg);
+}
+footer ul li:nth-child(2) {
+  list-style-position: inside;
+  list-style-image: url(../images/icons/hands-helping-solid.svg);
+}
+footer ul li a {
+  color: white;
+}
+
+/*components*/
+.btn {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  margin-top: 40px;
+  background: linear-gradient(to left top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  color: white;
+  border-radius: 100px;
+  cursor: pointer;
+  padding: 15px 20px;
+  border: none;
+  box-shadow: 0 0px 5px #c8c8c8;
+  min-width: 180px;
+}
+
+.btn:hover {
+  box-shadow: 0 0px 5px #494949;
+  background: linear-gradient(to left top, #a16be0, #bd71e1, #d579e1, #eb84e0, #ff93e1);
+}
+
+.heart-icon {
+  font-size: 25px;
+}
+
+.fa-heart.far:hover {
+  animation: heart 0.7s;
+  cursor: pointer;
+  background: linear-gradient(to left top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 900;
+}
+
+.loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 2;
+  animation: loader 0s forwards;
+  animation-delay: 2s;
+}
+.loader p {
+  background: linear-gradient(to left top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 40px;
+  margin-right: 15px;
+}
+.loader .spin {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #9356dc;
+  border-bottom: 5px solid #ff79da;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+/*pages*/
+/*pages*/
+h2 {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+i {
+  margin-right: 15px;
+}
+
+.localisation {
+  padding: 15px 0;
+  background-color: #eaeaea;
+  font-weight: 700;
+}
+
+.main-header {
+  padding: 30px 40px 50px 40px;
+  margin-bottom: 45px;
+  text-align: center;
+  background-color: #f6f6f6;
+  max-width: 100%;
+}
+.main-header h1 {
+  padding-bottom: 20px;
+  font-size: 26px;
+  font-weight: 700;
+}
+.main-header p {
+  font-size: 17px;
+  font-weight: 300;
+}
+
+section article {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+section article ul {
+  margin-top: 25px;
+  margin-bottom: 52px;
+  counter-reset: listCounter;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+section article li {
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  box-shadow: 0 0px 5px #c8c8c8;
+  width: 100%;
+  max-width: 360px;
+  position: relative;
+  cursor: pointer;
+  padding: 30px;
+}
+section article li::before {
+  counter-increment: listCounter;
+  content: counter(listCounter);
+  position: absolute;
+  top: 50%;
+  right: 0;
+  bottom: 0;
+  left: -3%;
+  transform: translate(0%, -50%);
+  background-color: #9356dc;
+  height: 25px;
+  width: 25px;
+  border-radius: 100%;
+  color: #fff;
+}
+section article li:hover {
+  background-color: #f2eafb;
+}
+section article li:hover .fas {
+  color: #9356dc;
+}
+
+#restaurants {
+  padding: 50px 0 20px 20px;
+}
+
+section:nth-of-type(2) {
+  background-color: #f6f6f6;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 101px;
+  row-gap: 50px;
+  padding: 0 20px 60px 20px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0px 5px #c8c8c8;
+  max-width: 400px;
+  width: 400px;
+  padding: 0;
+}
+
+.card-image {
+  position: relative;
+}
+.card-image img {
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 100%;
+  object-position: bottom;
+  height: 170px;
+}
+.card-image img[alt="la note enchantée"] {
+  object-position: 50% 60%;
+}
+
+.card-new {
+  background-color: #99e2d0;
+  color: #32b091;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 5px 10px;
+}
+.card-new p {
+  font-weight: 700;
+}
+
+.card-body {
+  margin: 15px 15px 10px 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.card-body h3 {
+  padding-bottom: 5px;
+  font-weight: 700;
+}
+.card-body h4 {
+  padding-bottom: 5px;
+}
+
+.header-menu {
+  position: fixed;
+  width: 100%;
+  background-color: white;
+}
+
+header div {
+  position: relative;
+  max-width: 600px;
+  width: 100%;
+}
+
+header a {
+  position: absolute;
+  left: 20px;
+}
+
+.fa-arrow-left {
+  font-size: 16px;
+}
+
+.main-menu {
+  background-color: #eaeaea;
+}
+
+main > img {
+  min-height: 272px;
+  height: 260px;
+  max-height: 260px;
+  object-fit: cover;
+  width: 100%;
+  position: relative;
+  top: 56px;
+  object-position: 50% 60%;
+}
+
+main > img[alt="la note enchantée"] {
+  object-position: 50% 50%;
+}
+
+.menu-container {
+  background-color: #f6f6f6;
+  padding-top: 40px;
+  padding-bottom: 50px;
+  position: relative;
+  border-top-right-radius: 40px;
+  border-top-left-radius: 40px;
+  max-width: 700px;
+  margin: auto;
+}
+.menu-container > div:nth-of-type(1) {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.menu-container h1 {
+  flex: 1;
+  font-size: 28px;
+  font-weight: 700;
+  font-family: "Shrikhand", sans-serif;
+}
+.menu-container span {
+  border-bottom: solid 3px #99e2d0;
+  padding-bottom: 5px;
+}
+.menu-container section {
+  padding-top: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+.menu-container h2 {
+  font-size: 16px;
+  font-weight: 400;
+  width: 100%;
+  padding-bottom: 10px;
+}
+.menu-container article {
+  background-color: white;
+  border-radius: 15px;
+  width: 100%;
+  animation: ItemMenu 1s forwards;
+  position: relative;
+  top: 40px;
+  opacity: 0;
+  display: flex;
+  padding: 0;
+  cursor: pointer;
+}
+.menu-container article .menu-check {
+  background-color: #99e2d0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  color: white;
+  font-size: 22px;
+  min-width: 0%;
+  opacity: 0;
+  transition: all 1s;
+}
+.menu-container article .fa-check-circle {
+  margin-right: 0%;
+  transition: all 0.7s;
+}
+.menu-container article:hover .menu-check {
+  opacity: 1;
+  min-width: 70px;
+}
+.menu-container article:hover .fa-check-circle {
+  transform: rotate(360deg);
+}
+.menu-container .menu-one {
+  animation-delay: 0.2s;
+}
+.menu-container .menu-two {
+  animation-delay: 0.5s;
+}
+.menu-container .menu-three {
+  animation-delay: 0.7s;
+}
+.menu-container .menu-four {
+  animation-delay: 1s;
+}
+.menu-container h3 {
+  font-weight: 700;
+  padding-bottom: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu-container p {
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu-container > div:nth-of-type(2) {
+  text-align: center;
+}
+
+.menu-items {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  min-width: 70%;
+  padding: 15px;
+}
+
+.menu-meal {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  margin-right: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */

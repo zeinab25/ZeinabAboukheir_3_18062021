@@ -1,0 +1,149 @@
+/*pages*/
+
+h2 {
+	font-size: 26px;
+	font-weight: 700;
+}
+
+i {
+	margin-right: 15px;
+}
+
+.localisation {
+	@extend %flex-center;
+	padding: 15px 0;
+	background-color: $localisation-color;
+	font-weight: 700;
+}
+
+.main-header {
+	padding: 30px 40px 50px 40px;
+	margin-bottom: 45px;
+	text-align: center;
+	background-color: $background-color-main;
+	max-width: 100%;
+
+	h1 {
+		padding-bottom: 20px;
+		font-size: 26px;
+		font-weight: 700;
+	}
+
+	p {
+		font-size: 17px;
+		font-weight: 300;
+	}
+}
+
+section {
+	article {
+		padding-right: 20px;
+		padding-left: 20px;
+		ul {
+			margin-top: 25px;
+			margin-bottom: 52px;
+			counter-reset: listCounter;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			gap: 20px;
+		}
+
+		li {
+			background-color: $background-color-main;
+			border-radius: 20px;
+			@include box-shadow;
+			width: 100%;
+			max-width: 360px;
+			position: relative;
+			cursor: pointer;
+			padding: 30px;
+
+			&::before {
+				counter-increment: listCounter;
+				content: counter(listCounter);
+				@include absolute-position(50%, 0, 0, -3%, 0%, -50%);
+				background-color: $purple-color;
+				height: 25px;
+				width: 25px;
+				border-radius: 100%;
+				color: #fff;
+				@extend %flex-center;
+			}
+			&:hover {
+				background-color: $light-purple-color;
+
+				.fas {
+					color: $purple-color;
+				}
+			}
+		}
+	}
+}
+
+#restaurants {
+	padding: 50px 0 20px 20px;
+}
+section:nth-of-type(2) {
+	background-color: $background-color-main;
+}
+
+.card-container {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 101px;
+	row-gap: 50px;
+	padding: 0 20px 60px 20px;
+}
+.card {
+	background-color: #fff;
+	border-radius: 20px;
+	@include box-shadow;
+	max-width: 400px;
+	width: 400px;
+	padding: 0;
+}
+
+.card-image {
+	position: relative;
+
+	img {
+		object-fit: cover;
+		border-top-left-radius: 20px;
+		border-top-right-radius: 20px;
+		width: 100%;
+		object-position: bottom;
+		height: 170px;
+	}
+
+	img[alt="la note enchantée"] {
+		object-position: 50% 60%;
+	}
+}
+
+.card-new {
+	background-color: $blue-color;
+	color: $dark-blue-color;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	padding: 5px 10px;
+
+	p {
+		font-weight: 700;
+	}
+}
+
+.card-body {
+	margin: 15px 15px 10px 15px;
+	display: flex;
+	justify-content: space-between;
+
+	h3 {
+		padding-bottom: 5px;
+		font-weight: 700;
+	}
+	h4 {
+		padding-bottom: 5px;
+	}
+}

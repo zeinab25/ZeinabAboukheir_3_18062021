@@ -1,0 +1,13 @@
+.heart-icon {
+	font-size: 25px;
+}
+
+.fa-heart.far:hover {
+	animation: heart 0.7s;
+	cursor: pointer;
+	background: $gradient-color;
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	font-weight: 900;
+}

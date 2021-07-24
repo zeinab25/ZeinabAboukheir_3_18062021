@@ -1,0 +1,13 @@
+/*header*/
+
+header {
+	@include box-shadow;
+	position: relative;
+	z-index: 1;
+	@extend %flex-center;
+	padding: 20px 0 15px 0;
+
+	img {
+		width: 160px;
+	}
+}
