@@ -15,12 +15,3 @@
 ) {
 	box-shadow: $size-x $size-y $blur $color;
 }
-
-@mixin absolute-position($top, $right, $bottom, $left, $x, $y) {
-	position: absolute;
-	top: $top;
-	right: $right;
-	bottom: $bottom;
-	left: $left;
-	transform: translate($x, $y);
-}
