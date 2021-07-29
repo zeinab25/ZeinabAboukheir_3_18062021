@@ -492,11 +492,11 @@ main > img[alt="la note enchantée"] {
   font-size: 22px;
   min-width: 0%;
   opacity: 0;
+  overflow: hidden;
   transition: all 1s;
 }
 .menu-container article .fa-check-circle {
   margin-right: 0%;
-  transition: all 0.7s;
 }
 .menu-container article:hover .menu-check {
   opacity: 1;
@@ -504,6 +504,7 @@ main > img[alt="la note enchantée"] {
 }
 .menu-container article:hover .fa-check-circle {
   transform: rotate(360deg);
+  transition-duration: 0.7s;
 }
 .menu-container .menu-one {
   animation-delay: 0.2s;
